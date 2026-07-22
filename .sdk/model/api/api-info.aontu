@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://github.com/l0v3m0n3y/waifufinder"
+      }
+      description: "This API allows users to generate and explore anime-style images with simple queries. With just a click, users can view images in full size and access detailed information about each image."
+      servers: [
+        {
+          description: "Production server"
+          url: "https://waifu-finder.vercel.app/api"
+        }
+      ]
+      summary: "This API allows users to generate and explore anime-style images with simple queries."
+      title: "Waifu Finder API"
+      version: "1.0.0"
+      website: "https://github.com/l0v3m0n3y/waifufinder"
+    }
+  }
+}
+

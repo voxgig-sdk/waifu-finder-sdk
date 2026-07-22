@@ -1,0 +1,53 @@
+{
+  "existing": {
+    "image": {
+      "IMAGE00": {
+        "artist": "s5a",
+        "height": "s5b",
+        "id": "IMAGE00",
+        "rating": "s5d",
+        "source": "s5e",
+        "tag": [],
+        "thumbnail": "s60",
+        "url": "s61",
+        "width": "s62"
+      },
+      "IMAGE01": {
+        "artist": "sb4",
+        "height": "sb5",
+        "id": "IMAGE01",
+        "rating": "sb7",
+        "source": "sb8",
+        "tag": [],
+        "thumbnail": "sba",
+        "url": "sbb",
+        "width": "sbc"
+      },
+      "IMAGE02": {
+        "artist": "s10e",
+        "height": "s10f",
+        "id": "IMAGE02",
+        "rating": "s111",
+        "source": "s112",
+        "tag": [],
+        "thumbnail": "s114",
+        "url": "s115",
+        "width": "s116"
+      }
+    }
+  },
+  "new": {
+    "image": {
+      "image_ref01": {
+        "artist": "s168",
+        "height": "s169",
+        "rating": "s16b",
+        "source": "s16c",
+        "tag": [],
+        "thumbnail": "s16e",
+        "url": "s16f",
+        "width": "s170"
+      }
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Waifu Finder API",
+    "description": "This API allows users to generate and explore anime-style images with simple queries. With just a click, users can view images in full size and access detailed information about each image.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/l0v3m0n3y/waifufinder"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://waifu-finder.vercel.app/api",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/images/random": {
+      "get": {
+        "summary": "Get random images",
+        "description": "Generate and explore random anime-style images. Returns a collection of images based on the specified rating and limit parameters.",
+        "operationId": "getRandomImages",
+        "tags": [
+          "Images"
+        ],
+        "parameters": [
+          {
+            "name": "rating",
+            "in": "query",
+            "description": "Content rating filter for images (e.g., 'explicit', 'safe', 'questionable')",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "explicit",
+                "safe",
+                "questionable"
+              ],
+              "default": "explicit"
+            },
+            "example": "explicit"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Maximum number of images to return",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 10
+            },
+            "example": 10
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with random anime-style images",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "Unique identifier for the image"
+                      },
+                      "url": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Full-size image URL"
+                      },
+                      "thumbnail": {
+                        "type": "string",
+                        "format": "uri",
+                        "description": "Thumbnail image URL"
+                      },
+                      "rating": {
+                        "type": "string",
+                        "description": "Content rating of the image",
+                        "enum": [
+                          "explicit",
+                          "safe",
+                          "questionable"
+                        ]
+                      },
+                      "tags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Tags associated with the image"
+                      },
+                      "source": {
+                        "type": "string",
+                        "description": "Original source of the image"
+                      },
+                      "artist": {
+                        "type": "string",
+                        "description": "Artist who created the image"
+                      },
+                      "width": {
+                        "type": "integer",
+                        "description": "Image width in pixels"
+                      },
+                      "height": {
+                        "type": "integer",
+                        "description": "Image height in pixels"
+                      }
+                    }
+                  }
+                },
+                "example": [
+                  {
+                    "id": "12345",
+                    "url": "https://example.com/images/waifu-12345.jpg",
+                    "thumbnail": "https://example.com/thumbnails/waifu-12345.jpg",
+                    "rating": "explicit",
+                    "tags": [
+                      "anime",
+                      "waifu",
+                      "art"
+                    ],
+                    "source": "https://example.com/source",
+                    "artist": "Artist Name",
+                    "width": 1920,
+                    "height": 1080
+                  }
+                ]
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request - Invalid parameters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message"
+                    }
+                  }
+                },
+                "example": {
+                  "error": "Invalid rating parameter"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message"
+                    }
+                  }
+                },
+                "example": {
+                  "error": "Internal server error occurred"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Images",
+      "description": "Operations related to anime-style images"
+    }
+  ],
+  "externalDocs": {
+    "description": "GitHub Repository and Documentation",
+    "url": "https://github.com/l0v3m0n3y/waifufinder"
+  }
+}
