@@ -20,7 +20,7 @@ class Image
     public ?string $id = null;
     public ?string $rating = null;
     public ?string $source = null;
-    public ?array $tag = null;
+    public ?array $tags = null;
     public ?string $thumbnail = null;
     public ?string $url = null;
     public ?int $width = null;
@@ -34,7 +34,7 @@ class ImageListMatch
     public ?string $id = null;
     public ?string $rating = null;
     public ?string $source = null;
-    public ?array $tag = null;
+    public ?array $tags = null;
     public ?string $thumbnail = null;
     public ?string $url = null;
     public ?int $width = null;

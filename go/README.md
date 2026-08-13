@@ -265,7 +265,7 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 | `"id"` |  |
 | `"rating"` |  |
 | `"source"` |  |
-| `"tag"` |  |
+| `"tags"` |  |
 | `"thumbnail"` |  |
 | `"url"` |  |
 | `"width"` |  |
@@ -298,7 +298,7 @@ Create an instance: `image := client.Image(nil)`
 | `id` | `string` |  |
 | `rating` | `string` |  |
 | `source` | `string` |  |
-| `tag` | `[]any` |  |
+| `tags` | `[]any` |  |
 | `thumbnail` | `string` |  |
 | `url` | `string` |  |
 | `width` | `int` |  |

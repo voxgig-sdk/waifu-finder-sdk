@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = WaifuFinderSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = WaifuFinderSDK.test({
+  entity: {
+    image: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const images = await client.Image().list()
-// images is an array of bare Image records populated with mock data
+// images is an array of Image entities, populated with mock data
+// — call images[0].data() for the record itself
 console.log(images)
 ```
 
@@ -110,7 +119,7 @@ import { WaifuFinderSDK } from '@voxgig-sdk/waifu-finder'
 
 const client = new WaifuFinderSDK()
 
-// List all images (returns Image[])
+// List all images (returns ImageEntity[] — .data() for the record)
 const images = await client.Image().list()
 for (const image of images) {
   console.log(image)
@@ -343,6 +352,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://github.com/l0v3m0n3y/waifufinder](https://github.com/l0v3m0n3y/waifufinder)
 

@@ -26,8 +26,8 @@ import {
 describe('ImageEntity', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when WAIFUFINDER_TEST_LIVE=TRUE.
-  afterEach(liveDelay('WAIFUFINDER_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when WAIFU_FINDER_TEST_LIVE=TRUE.
+  afterEach(liveDelay('WAIFU_FINDER_TEST_LIVE'))
 
   test('instance', async () => {
     const testsdk = WaifuFinderSDK.test()
@@ -63,7 +63,7 @@ describe('ImageEntity', async () => {
     const image_ref01_ent = client.Image()
     const image_ref01_match: any = {}
 
-    const image_ref01_list = await image_ref01_ent.list(image_ref01_match)
+    const image_ref01_list = (await image_ref01_ent.list(image_ref01_match)).map((e: any) => e.data())
 
 
   })

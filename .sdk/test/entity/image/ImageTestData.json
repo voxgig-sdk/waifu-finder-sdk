@@ -7,7 +7,7 @@
         "id": "IMAGE00",
         "rating": "s5d",
         "source": "s5e",
-        "tag": [],
+        "tags": [],
         "thumbnail": "s60",
         "url": "s61",
         "width": "s62"
@@ -18,7 +18,7 @@
         "id": "IMAGE01",
         "rating": "sb7",
         "source": "sb8",
-        "tag": [],
+        "tags": [],
         "thumbnail": "sba",
         "url": "sbb",
         "width": "sbc"
@@ -29,7 +29,7 @@
         "id": "IMAGE02",
         "rating": "s111",
         "source": "s112",
-        "tag": [],
+        "tags": [],
         "thumbnail": "s114",
         "url": "s115",
         "width": "s116"
@@ -43,7 +43,7 @@
         "height": "s169",
         "rating": "s16b",
         "source": "s16c",
-        "tag": [],
+        "tags": [],
         "thumbnail": "s16e",
         "url": "s16f",
         "width": "s170"

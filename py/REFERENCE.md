@@ -92,7 +92,7 @@ image = client.Image()
 | `id` | `str` | No |  |
 | `rating` | `str` | No |  |
 | `source` | `str` | No |  |
-| `tag` | `list` | No |  |
+| `tags` | `list` | No |  |
 | `thumbnail` | `str` | No |  |
 | `url` | `str` | No |  |
 | `width` | `int` | No |  |

@@ -67,7 +67,7 @@ class WaifuFinderConfig
             ],
             [
               'active' => true,
-              'name' => 'tag',
+              'name' => 'tags',
               'req' => false,
               'type' => '`$ARRAY`',
               'index$' => 5,
@@ -124,6 +124,7 @@ class WaifuFinderConfig
                       ],
                     ],
                   ],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/images/random',
                   'parts' => [

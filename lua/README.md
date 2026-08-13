@@ -218,9 +218,9 @@ data **directly** — there is no wrapper:
 
 Check `err` first (it is non-`nil` on failure), then use `value`:
 
-    local image, err = client:Image():load()
+    local image, err = client:Image():list()
     if err then error(err) end
-    -- image is the loaded record
+    -- image is the record list
 
 Only `direct()` returns a response envelope — a `table` with `ok`,
 `status`, `headers`, and `data` keys.
@@ -236,7 +236,7 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 | `id` |  |
 | `rating` |  |
 | `source` |  |
-| `tag` |  |
+| `tags` |  |
 | `thumbnail` |  |
 | `url` |  |
 | `width` |  |
@@ -269,7 +269,7 @@ Create an instance: `local image = client:Image(nil)`
 | `id` | `string` |  |
 | `rating` | `string` |  |
 | `source` | `string` |  |
-| `tag` | `table` |  |
+| `tags` | `table` |  |
 | `thumbnail` | `string` |  |
 | `url` | `string` |  |
 | `width` | `number` |  |

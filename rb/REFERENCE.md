@@ -98,7 +98,7 @@ image = client.Image
 | `id` | `String` | No |  |
 | `rating` | `String` | No |  |
 | `source` | `String` | No |  |
-| `tag` | `Array` | No |  |
+| `tags` | `Array` | No |  |
 | `thumbnail` | `String` | No |  |
 | `url` | `String` | No |  |
 | `width` | `Integer` | No |  |

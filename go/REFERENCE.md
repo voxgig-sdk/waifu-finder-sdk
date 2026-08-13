@@ -103,7 +103,7 @@ fmt.Println(image.GetName()) // "image"
 | `id` | `string` | No |  |
 | `rating` | `string` | No |  |
 | `source` | `string` | No |  |
-| `tag` | `[]any` | No |  |
+| `tags` | `[]any` | No |  |
 | `thumbnail` | `string` | No |  |
 | `url` | `string` | No |  |
 | `width` | `int` | No |  |

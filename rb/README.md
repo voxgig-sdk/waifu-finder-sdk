@@ -119,7 +119,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = WaifuFinderSDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 image = client.Image.list()
 puts image
 ```
@@ -241,7 +242,7 @@ returns a result `Hash` with these keys:
 | `id` |  |
 | `rating` |  |
 | `source` |  |
-| `tag` |  |
+| `tags` |  |
 | `thumbnail` |  |
 | `url` |  |
 | `width` |  |
@@ -274,7 +275,7 @@ Create an instance: `image = client.Image`
 | `id` | `String` |  |
 | `rating` | `String` |  |
 | `source` | `String` |  |
-| `tag` | `Array` |  |
+| `tags` | `Array` |  |
 | `thumbnail` | `String` |  |
 | `url` | `String` |  |
 | `width` | `Integer` |  |

@@ -11,7 +11,7 @@ export interface Image {
   id?: string
   rating?: string
   source?: string
-  tag?: any[]
+  tags?: any[]
   thumbnail?: string
   url?: string
   width?: number
@@ -23,9 +23,15 @@ export interface ImageListMatch {
   id?: string
   rating?: string
   source?: string
-  tag?: any[]
+  tags?: any[]
   thumbnail?: string
   url?: string
   width?: number
+
+  // Selects a custom action instead of the plain list:
+  //   'random'
+  // The remaining keys are that action's own payload.
+  $action?: string
+  [action: string]: any
 }
 

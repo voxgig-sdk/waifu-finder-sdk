@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from waifufinder_sdk.utility.voxgig_struct import voxgig_struct as vs
 from waifufinder_sdk import WaifuFinderSDK
-from core import helpers
+from waifufinder_sdk.core import helpers
 from test import runner
 
 
@@ -58,11 +58,11 @@ def _image_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "WAIFUFINDER_TEST_IMAGE_ENTID": {},
-        "WAIFUFINDER_TEST_LIVE": "FALSE",
+        "WAIFU_FINDER_TEST_IMAGE_ENTID": {},
+        "WAIFU_FINDER_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("WAIFUFINDER_TEST_LIVE") == "TRUE"
+    live = env.get("WAIFU_FINDER_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

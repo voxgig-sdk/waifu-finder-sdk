@@ -25,7 +25,7 @@
 # @!attribute [rw] source
 #   @return [String, nil]
 #
-# @!attribute [rw] tag
+# @!attribute [rw] tags
 #   @return [Array, nil]
 #
 # @!attribute [rw] thumbnail
@@ -42,7 +42,7 @@ Image = Struct.new(
   :id,
   :rating,
   :source,
-  :tag,
+  :tags,
   :thumbnail,
   :url,
   :width,
@@ -66,7 +66,7 @@ Image = Struct.new(
 # @!attribute [rw] source
 #   @return [String, nil]
 #
-# @!attribute [rw] tag
+# @!attribute [rw] tags
 #   @return [Array, nil]
 #
 # @!attribute [rw] thumbnail
@@ -83,7 +83,7 @@ ImageListMatch = Struct.new(
   :id,
   :rating,
   :source,
-  :tag,
+  :tags,
   :thumbnail,
   :url,
   :width,

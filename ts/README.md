@@ -35,7 +35,9 @@ const client = new WaifuFinderSDK()
 
 ### 2. List image records
 
-`list()` resolves to an array of Image objects — iterate it directly:
+`list()` resolves to an array of Image ENTITIES — every operation
+resolves to entities, not raw records. Iterate them directly, and call
+`.data()` on one for the record it holds:
 
 ```ts
 const images = await client.Image().list()
@@ -120,7 +122,8 @@ Create a mock client for unit testing — no server required:
 const client = WaifuFinderSDK.test()
 
 const image = await client.Image().list()
-// image is a bare entity populated with mock response data
+// image is the entity, populated with mock response data
+// — call image.data() for the record itself
 console.log(image)
 ```
 
@@ -289,7 +292,7 @@ The `prepare()` method returns:
 | `id` |  |
 | `rating` |  |
 | `source` |  |
-| `tag` |  |
+| `tags` |  |
 | `thumbnail` |  |
 | `url` |  |
 | `width` |  |
@@ -322,7 +325,7 @@ Create an instance: `const image = client.Image()`
 | `id` | `string` |  |
 | `rating` | `string` |  |
 | `source` | `string` |  |
-| `tag` | `any[]` |  |
+| `tags` | `any[]` |  |
 | `thumbnail` | `string` |  |
 | `url` | `string` |  |
 | `width` | `number` |  |

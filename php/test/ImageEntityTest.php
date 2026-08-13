@@ -72,7 +72,7 @@ class ImageEntityTest extends TestCase
         // The basic flow consumes synthetic IDs from the fixture. In live mode
         // without an *_ENTID env override, those IDs hit the live API and 4xx.
         if (!empty($setup["synthetic_only"])) {
-            $this->markTestSkipped("live entity test uses synthetic IDs from fixture — set WAIFUFINDER_TEST_IMAGE_ENTID JSON to run live");
+            $this->markTestSkipped("live entity test uses synthetic IDs from fixture — set WAIFU_FINDER_TEST_IMAGE_ENTID JSON to run live");
             return;
         }
         $client = $setup["client"];
@@ -117,22 +117,22 @@ function image_basic_setup($extra)
     // Detect ENTID env override before envOverride consumes it. When live
     // mode is on without a real override, the basic test runs against synthetic
     // IDs from the fixture and 4xx's. Surface this so the test can skip.
-    $entid_env_raw = getenv("WAIFUFINDER_TEST_IMAGE_ENTID");
+    $entid_env_raw = getenv("WAIFU_FINDER_TEST_IMAGE_ENTID");
     $idmap_overridden = $entid_env_raw !== false && str_starts_with(trim($entid_env_raw), "{");
 
     $env = Runner::env_override([
-        "WAIFUFINDER_TEST_IMAGE_ENTID" => $idmap,
-        "WAIFUFINDER_TEST_LIVE" => "FALSE",
-        "WAIFUFINDER_TEST_EXPLAIN" => "FALSE",
+        "WAIFU_FINDER_TEST_IMAGE_ENTID" => $idmap,
+        "WAIFU_FINDER_TEST_LIVE" => "FALSE",
+        "WAIFU_FINDER_TEST_EXPLAIN" => "FALSE",
     ]);
 
     $idmap_resolved = Helpers::to_map(
-        $env["WAIFUFINDER_TEST_IMAGE_ENTID"]);
+        $env["WAIFU_FINDER_TEST_IMAGE_ENTID"]);
     if ($idmap_resolved === null) {
         $idmap_resolved = Helpers::to_map($idmap);
     }
 
-    if ($env["WAIFUFINDER_TEST_LIVE"] === "TRUE") {
+    if ($env["WAIFU_FINDER_TEST_LIVE"] === "TRUE") {
         $merged_opts = Vs::merge([
             [
             ],
@@ -141,13 +141,13 @@ function image_basic_setup($extra)
         $client = new WaifuFinderSDK(Helpers::to_map($merged_opts));
     }
 
-    $live = $env["WAIFUFINDER_TEST_LIVE"] === "TRUE";
+    $live = $env["WAIFU_FINDER_TEST_LIVE"] === "TRUE";
     return [
         "client" => $client,
         "data" => $entity_data,
         "idmap" => $idmap_resolved,
         "env" => $env,
-        "explain" => $env["WAIFUFINDER_TEST_EXPLAIN"] === "TRUE",
+        "explain" => $env["WAIFU_FINDER_TEST_EXPLAIN"] === "TRUE",
         "live" => $live,
         "synthetic_only" => $live && !$idmap_overridden,
         "now" => (int)(microtime(true) * 1000),

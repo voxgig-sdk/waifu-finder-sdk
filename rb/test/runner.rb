@@ -23,8 +23,8 @@ module WaifuFinderTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("WAIFUFINDER_TEST_LIVE")
-    override = getenv("WAIFUFINDER_TEST_OVERRIDE")
+    live = getenv("WAIFU_FINDER_TEST_LIVE")
+    override = getenv("WAIFU_FINDER_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module WaifuFinderTestRunner
       end
     end
 
-    explain = getenv("WAIFUFINDER_TEST_EXPLAIN")
-    m["WAIFUFINDER_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("WAIFU_FINDER_TEST_EXPLAIN")
+    m["WAIFU_FINDER_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

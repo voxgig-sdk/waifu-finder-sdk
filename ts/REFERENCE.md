@@ -121,10 +121,30 @@ const image = client.Image()
 | `id` | `string` | No |  |
 | `rating` | `string` | No |  |
 | `source` | `string` | No |  |
-| `tag` | `any[]` | No |  |
+| `tags` | `any[]` | No |  |
 | `thumbnail` | `string` | No |  |
 | `url` | `string` | No |  |
 | `width` | `number` | No |  |
+
+### Actions
+
+This entity exposes custom API actions in addition to the standard
+operations. Select one with `$action` in the call's argument; the
+remaining keys are sent as that action's payload.
+
+| Action | Route | Call |
+| --- | --- | --- |
+| `random` | `/images/random` | `client.Image().list({ $action: 'random', ... })` |
+
+An action returns that action's OWN response, which is not necessarily a
+Image record — check the API definition for its shape.
+
+```ts
+const result = await client.Image().list({
+  $action: 'random',
+  /* ...the action's own arguments */
+})
+```
 
 ### Operations
 

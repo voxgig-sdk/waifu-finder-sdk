@@ -97,7 +97,7 @@ $image = $client->Image();
 | `id` | `string` | No |  |
 | `rating` | `string` | No |  |
 | `source` | `string` | No |  |
-| `tag` | `array` | No |  |
+| `tags` | `array` | No |  |
 | `thumbnail` | `string` | No |  |
 | `url` | `string` | No |  |
 | `width` | `int` | No |  |

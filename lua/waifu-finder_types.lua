@@ -12,7 +12,7 @@
 ---@field id? string
 ---@field rating? string
 ---@field source? string
----@field tag? table
+---@field tags? table
 ---@field thumbnail? string
 ---@field url? string
 ---@field width? number
@@ -23,7 +23,7 @@
 ---@field id? string
 ---@field rating? string
 ---@field source? string
----@field tag? table
+---@field tags? table
 ---@field thumbnail? string
 ---@field url? string
 ---@field width? number

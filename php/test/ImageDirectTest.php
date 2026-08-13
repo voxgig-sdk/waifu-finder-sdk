@@ -66,11 +66,11 @@ function image_direct_setup($mockres)
     $calls = new \ArrayObject();
 
     $env = Runner::env_override([
-        "WAIFUFINDER_TEST_IMAGE_ENTID" => [],
-        "WAIFUFINDER_TEST_LIVE" => "FALSE",
+        "WAIFU_FINDER_TEST_IMAGE_ENTID" => [],
+        "WAIFU_FINDER_TEST_LIVE" => "FALSE",
     ]);
 
-    $live = $env["WAIFUFINDER_TEST_LIVE"] === "TRUE";
+    $live = $env["WAIFU_FINDER_TEST_LIVE"] === "TRUE";
 
     if ($live) {
         $merged_opts = [
