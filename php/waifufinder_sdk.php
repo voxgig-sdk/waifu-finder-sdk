@@ -40,7 +40,7 @@ class WaifuFinderSDK
         $utility = new WaifuFinderUtility();
         $this->_utility = $utility;
 
-        $config = WaifuFinderConfig::make_config();
+        $config = WaifuFinderConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

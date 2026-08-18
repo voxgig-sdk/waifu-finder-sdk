@@ -15,7 +15,7 @@ require_relative "../WaifuFinder_sdk"
 module WaifuFinderFeatureHarness
   # True when this SDK was generated with the named feature.
   def self.has_feature?(name)
-    f = WaifuFinderConfig.make_config["feature"]
+    f = WaifuFinderConfig.shared_config["feature"]
     f.is_a?(Hash) && !f[name].nil?
   end
 

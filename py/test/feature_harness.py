@@ -14,7 +14,7 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from waifufinder_sdk.config import make_config
+from waifufinder_sdk.config import shared_config
 from waifufinder_sdk.features import _make_feature
 from waifufinder_sdk.core.control import WaifuFinderControl
 from waifufinder_sdk.core.error import WaifuFinderError
@@ -24,7 +24,7 @@ from waifufinder_sdk.core.spec import WaifuFinderSpec
 
 # True when this SDK was generated with the named feature.
 def has_feature(name):
-    feature = make_config().get("feature")
+    feature = shared_config().get("feature")
     return isinstance(feature, dict) and feature.get(name) is not None
 
 

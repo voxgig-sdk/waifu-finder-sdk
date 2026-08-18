@@ -28,7 +28,7 @@ class WaifuFinderSDK
     utility = WaifuFinderUtility.new
     @_utility = utility
 
-    config = WaifuFinderConfig.make_config
+    config = WaifuFinderConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

@@ -23,6 +23,7 @@ build = {
   modules = {
     ["waifu-finder_sdk"] = "waifu-finder_sdk.lua",
     ["config"] = "config.lua",
+    ["config_shared"] = "config_shared.lua",
     ["features"] = "features.lua",
   }
 }
