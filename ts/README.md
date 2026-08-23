@@ -9,7 +9,7 @@ The API is exposed as capitalised, semantic **Entities** — e.g.
 instead of raw URL paths and query parameters. This keeps the surface
 predictable and low-friction for both humans and AI agents.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go`, `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb` — see
 > the [top-level README](../README.md).
 
 
@@ -287,15 +287,15 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `artist` |  |
-| `height` |  |
-| `id` |  |
-| `rating` |  |
-| `source` |  |
-| `tags` |  |
-| `thumbnail` |  |
-| `url` |  |
-| `width` |  |
+| `artist` | Artist who created the image |
+| `height` | Image height in pixels |
+| `id` | Unique identifier for the image |
+| `rating` | Content rating of the image |
+| `source` | Original source of the image |
+| `tags` | Tags associated with the image |
+| `thumbnail` | Thumbnail image URL |
+| `url` | Full-size image URL |
+| `width` | Image width in pixels |
 
 Operations: list.
 
@@ -320,15 +320,15 @@ Create an instance: `const image = client.Image()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `artist` | `string` |  |
-| `height` | `number` |  |
-| `id` | `string` |  |
-| `rating` | `string` |  |
-| `source` | `string` |  |
-| `tags` | `any[]` |  |
-| `thumbnail` | `string` |  |
-| `url` | `string` |  |
-| `width` | `number` |  |
+| `artist` | `string` | Artist who created the image |
+| `height` | `number` | Image height in pixels |
+| `id` | `string` | Unique identifier for the image |
+| `rating` | `string` | Content rating of the image |
+| `source` | `string` | Original source of the image |
+| `tags` | `any[]` | Tags associated with the image |
+| `thumbnail` | `string` | Thumbnail image URL |
+| `url` | `string` | Full-size image URL |
+| `width` | `number` | Image width in pixels |
 
 #### Example: List
 

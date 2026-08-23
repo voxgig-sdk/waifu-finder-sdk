@@ -116,15 +116,15 @@ const image = client.Image()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `artist` | `string` | No |  |
-| `height` | `number` | No |  |
-| `id` | `string` | No |  |
-| `rating` | `string` | No |  |
-| `source` | `string` | No |  |
-| `tags` | `any[]` | No |  |
-| `thumbnail` | `string` | No |  |
-| `url` | `string` | No |  |
-| `width` | `number` | No |  |
+| `artist` | `string` | No | Artist who created the image |
+| `height` | `number` | No | Image height in pixels |
+| `id` | `string` | No | Unique identifier for the image |
+| `rating` | `string` | No | Content rating of the image |
+| `source` | `string` | No | Original source of the image |
+| `tags` | `any[]` | No | Tags associated with the image |
+| `thumbnail` | `string` | No | Thumbnail image URL |
+| `url` | `string` | No | Full-size image URL |
+| `width` | `number` | No | Image width in pixels |
 
 ### Actions
 

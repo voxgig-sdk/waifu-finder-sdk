@@ -6,7 +6,7 @@ The Golang SDK for the WaifuFinder API — an entity-oriented client using stand
 
 It exposes the API as capitalised, semantic **Entities** — e.g. `client.Image(nil)` — each with the same small set of operations (`List`) instead of raw URL paths and query strings. You call meaning, not endpoints, which keeps the cognitive load low.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb`, `ts` — see
 > the [top-level README](../README.md).
 
 
@@ -260,15 +260,15 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"artist"` |  |
-| `"height"` |  |
-| `"id"` |  |
-| `"rating"` |  |
-| `"source"` |  |
-| `"tags"` |  |
-| `"thumbnail"` |  |
-| `"url"` |  |
-| `"width"` |  |
+| `"artist"` | Artist who created the image |
+| `"height"` | Image height in pixels |
+| `"id"` | Unique identifier for the image |
+| `"rating"` | Content rating of the image |
+| `"source"` | Original source of the image |
+| `"tags"` | Tags associated with the image |
+| `"thumbnail"` | Thumbnail image URL |
+| `"url"` | Full-size image URL |
+| `"width"` | Image width in pixels |
 
 Operations: List.
 
@@ -293,15 +293,15 @@ Create an instance: `image := client.Image(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `artist` | `string` |  |
-| `height` | `int` |  |
-| `id` | `string` |  |
-| `rating` | `string` |  |
-| `source` | `string` |  |
-| `tags` | `[]any` |  |
-| `thumbnail` | `string` |  |
-| `url` | `string` |  |
-| `width` | `int` |  |
+| `artist` | `string` | Artist who created the image |
+| `height` | `int` | Image height in pixels |
+| `id` | `string` | Unique identifier for the image |
+| `rating` | `string` | Content rating of the image |
+| `source` | `string` | Original source of the image |
+| `tags` | `[]any` | Tags associated with the image |
+| `thumbnail` | `string` | Thumbnail image URL |
+| `url` | `string` | Full-size image URL |
+| `width` | `int` | Image width in pixels |
 
 #### Example: List
 

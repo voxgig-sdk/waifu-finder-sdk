@@ -93,15 +93,15 @@ image = client.Image
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `artist` | `String` | No |  |
-| `height` | `Integer` | No |  |
-| `id` | `String` | No |  |
-| `rating` | `String` | No |  |
-| `source` | `String` | No |  |
-| `tags` | `Array` | No |  |
-| `thumbnail` | `String` | No |  |
-| `url` | `String` | No |  |
-| `width` | `Integer` | No |  |
+| `artist` | `String` | No | Artist who created the image |
+| `height` | `Integer` | No | Image height in pixels |
+| `id` | `String` | No | Unique identifier for the image |
+| `rating` | `String` | No | Content rating of the image |
+| `source` | `String` | No | Original source of the image |
+| `tags` | `Array` | No | Tags associated with the image |
+| `thumbnail` | `String` | No | Thumbnail image URL |
+| `url` | `String` | No | Full-size image URL |
+| `width` | `Integer` | No | Image width in pixels |
 
 ### Operations
 

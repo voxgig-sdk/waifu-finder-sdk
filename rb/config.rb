@@ -19,6 +19,9 @@ module WaifuFinderConfig
     {
       "main" => {
         "name" => "WaifuFinder",
+        "slug" => "waifu-finder",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {
@@ -41,38 +44,47 @@ module WaifuFinderConfig
           "fields" => [
             {
               "name" => "artist",
+              "short" => "Artist who created the image",
               "type" => "`$STRING`",
             },
             {
               "name" => "height",
+              "short" => "Image height in pixels",
               "type" => "`$INTEGER`",
             },
             {
               "name" => "id",
+              "short" => "Unique identifier for the image",
               "type" => "`$STRING`",
             },
             {
               "name" => "rating",
+              "short" => "Content rating of the image",
               "type" => "`$STRING`",
             },
             {
               "name" => "source",
+              "short" => "Original source of the image",
               "type" => "`$STRING`",
             },
             {
               "name" => "tags",
+              "short" => "Tags associated with the image",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "thumbnail",
+              "short" => "Thumbnail image URL",
               "type" => "`$STRING`",
             },
             {
               "name" => "url",
+              "short" => "Full-size image URL",
               "type" => "`$STRING`",
             },
             {
               "name" => "width",
+              "short" => "Image width in pixels",
               "type" => "`$INTEGER`",
             },
           ],

@@ -231,15 +231,15 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `artist` |  |
-| `height` |  |
-| `id` |  |
-| `rating` |  |
-| `source` |  |
-| `tags` |  |
-| `thumbnail` |  |
-| `url` |  |
-| `width` |  |
+| `artist` | Artist who created the image |
+| `height` | Image height in pixels |
+| `id` | Unique identifier for the image |
+| `rating` | Content rating of the image |
+| `source` | Original source of the image |
+| `tags` | Tags associated with the image |
+| `thumbnail` | Thumbnail image URL |
+| `url` | Full-size image URL |
+| `width` | Image width in pixels |
 
 Operations: List.
 
@@ -264,15 +264,15 @@ Create an instance: `local image = client:Image(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `artist` | `string` |  |
-| `height` | `number` |  |
-| `id` | `string` |  |
-| `rating` | `string` |  |
-| `source` | `string` |  |
-| `tags` | `table` |  |
-| `thumbnail` | `string` |  |
-| `url` | `string` |  |
-| `width` | `number` |  |
+| `artist` | `string` | Artist who created the image |
+| `height` | `number` | Image height in pixels |
+| `id` | `string` | Unique identifier for the image |
+| `rating` | `string` | Content rating of the image |
+| `source` | `string` | Original source of the image |
+| `tags` | `table` | Tags associated with the image |
+| `thumbnail` | `string` | Thumbnail image URL |
+| `url` | `string` | Full-size image URL |
+| `width` | `number` | Image width in pixels |
 
 #### Example: List
 
