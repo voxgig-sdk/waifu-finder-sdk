@@ -42,6 +42,7 @@ class WaifuFinderConfig
           'options' => [
             'active' => false,
           ],
+          'transport' => 'base',
         ],
             ],
             "options" => [
