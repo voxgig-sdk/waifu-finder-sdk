@@ -29,14 +29,7 @@ class Image
 /** Request payload for Image#list. */
 class ImageListMatch
 {
-    public ?string $artist = null;
-    public ?int $height = null;
-    public ?string $id = null;
+    public ?int $limit = null;
     public ?string $rating = null;
-    public ?string $source = null;
-    public ?array $tags = null;
-    public ?string $thumbnail = null;
-    public ?string $url = null;
-    public ?int $width = null;
 }
 

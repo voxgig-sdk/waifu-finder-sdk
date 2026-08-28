@@ -18,15 +18,8 @@ export interface Image {
 }
 
 export interface ImageListMatch {
-  artist?: string
-  height?: number
-  id?: string
+  limit?: number
   rating?: string
-  source?: string
-  tags?: any[]
-  thumbnail?: string
-  url?: string
-  width?: number
 
   // Selects a custom action instead of the plain list:
   //   'random'

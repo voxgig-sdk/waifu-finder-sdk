@@ -18,15 +18,8 @@
 ---@field width? number
 
 ---@class ImageListMatch
----@field artist? string
----@field height? number
----@field id? string
+---@field limit? number
 ---@field rating? string
----@field source? string
----@field tags? table
----@field thumbnail? string
----@field url? string
----@field width? number
 
 local M = {}
 

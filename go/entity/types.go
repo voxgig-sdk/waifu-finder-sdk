@@ -27,15 +27,8 @@ type Image struct {
 
 // ImageListMatch is the typed request payload for Image.ListTyped.
 type ImageListMatch struct {
-	Artist *string `json:"artist,omitempty"`
-	Height *int `json:"height,omitempty"`
-	Id *string `json:"id,omitempty"`
+	Limit *int `json:"limit,omitempty"`
 	Rating *string `json:"rating,omitempty"`
-	Source *string `json:"source,omitempty"`
-	Tags *[]any `json:"tags,omitempty"`
-	Thumbnail *string `json:"thumbnail,omitempty"`
-	Url *string `json:"url,omitempty"`
-	Width *int `json:"width,omitempty"`
 }
 
 // asMap turns a typed request/data struct into the map[string]any the

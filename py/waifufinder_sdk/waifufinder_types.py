@@ -29,12 +29,5 @@ class Image(TypedDict, total=False):
 
 
 class ImageListMatch(TypedDict, total=False):
-    artist: str
-    height: int
-    id: str
+    limit: int
     rating: str
-    source: str
-    tags: list
-    thumbnail: str
-    url: str
-    width: int

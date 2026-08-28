@@ -51,42 +51,14 @@ Image = Struct.new(
 
 # Request payload for Image#list.
 #
-# @!attribute [rw] artist
-#   @return [String, nil]
-#
-# @!attribute [rw] height
+# @!attribute [rw] limit
 #   @return [Integer, nil]
-#
-# @!attribute [rw] id
-#   @return [String, nil]
 #
 # @!attribute [rw] rating
 #   @return [String, nil]
-#
-# @!attribute [rw] source
-#   @return [String, nil]
-#
-# @!attribute [rw] tags
-#   @return [Array, nil]
-#
-# @!attribute [rw] thumbnail
-#   @return [String, nil]
-#
-# @!attribute [rw] url
-#   @return [String, nil]
-#
-# @!attribute [rw] width
-#   @return [Integer, nil]
 ImageListMatch = Struct.new(
-  :artist,
-  :height,
-  :id,
+  :limit,
   :rating,
-  :source,
-  :tags,
-  :thumbnail,
-  :url,
-  :width,
   keyword_init: true
 )
 
