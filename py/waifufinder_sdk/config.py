@@ -1,6 +1,14 @@
 # WaifuFinder SDK configuration
 
 
+# The sekreto plugin DEFINITIONS the model selected per feature, imported
+# above by name from the modules the catalogue's active `plugin.def`
+# entries declare. Handed to each feature (secrets builds its Sekreto
+# with them): a provider kind not listed here is unknown to that SDK.
+FEATURE_PLUGINS = {
+}
+
+
 _shared_config = None
 
 
@@ -83,11 +91,13 @@ def make_config():
             "type": "`$ARRAY`",
           },
           {
+            "format": "uri",
             "name": "thumbnail",
             "short": "Thumbnail image URL",
             "type": "`$STRING`",
           },
           {
+            "format": "uri",
             "name": "url",
             "short": "Full-size image URL",
             "type": "`$STRING`",
@@ -98,6 +108,10 @@ def make_config():
             "type": "`$INTEGER`",
           },
         ],
+        "id": {
+          "field": "id",
+          "name": "id",
+        },
         "name": "image",
         "op": {
           "list": {
@@ -126,9 +140,13 @@ def make_config():
                 "kind": "http",
                 "method": "GET",
                 "orig": "/images/random",
-                "parts": [
-                  "images",
-                  "random",
+                "segments": [
+                  {
+                    "lit": "images",
+                  },
+                  {
+                    "lit": "random",
+                  },
                 ],
                 "select": {
                   "$action": "random",
@@ -141,6 +159,10 @@ def make_config():
                   "req": "`reqdata`",
                   "res": "`body`",
                 },
+                "parts": [
+                  "images",
+                  "random",
+                ],
               },
             ],
           },

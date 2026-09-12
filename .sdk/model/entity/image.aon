@@ -42,12 +42,14 @@ main: kit: entity: image: {
       type: "`$ARRAY`"
     }
     {
+      format: "uri"
       name: "thumbnail"
       req: false
       short: "Thumbnail image URL"
       type: "`$STRING`"
     }
     {
+      format: "uri"
       name: "url"
       req: false
       short: "Full-size image URL"
@@ -94,9 +96,13 @@ main: kit: entity: image: {
           }
           method: "GET"
           orig: "/images/random"
-          parts: [
-            "images"
-            "random"
+          segments: [
+            {
+              lit: "images"
+            }
+            {
+              lit: "random"
+            }
           ]
           select: {
             "$action": "random"

@@ -62,11 +62,13 @@ local function make_config()
             ["type"] = "`$ARRAY`",
           },
           {
+            ["format"] = "uri",
             ["name"] = "thumbnail",
             ["short"] = "Thumbnail image URL",
             ["type"] = "`$STRING`",
           },
           {
+            ["format"] = "uri",
             ["name"] = "url",
             ["short"] = "Full-size image URL",
             ["type"] = "`$STRING`",
@@ -76,6 +78,10 @@ local function make_config()
             ["short"] = "Image width in pixels",
             ["type"] = "`$INTEGER`",
           },
+        },
+        ["id"] = {
+          ["field"] = "id",
+          ["name"] = "id",
         },
         ["name"] = "image",
         ["op"] = {
@@ -105,9 +111,13 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/images/random",
-                ["parts"] = {
-                  "images",
-                  "random",
+                ["segments"] = {
+                  {
+                    ["lit"] = "images",
+                  },
+                  {
+                    ["lit"] = "random",
+                  },
                 },
                 ["select"] = {
                   ["$action"] = "random",
@@ -119,6 +129,10 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "images",
+                  "random",
                 },
               },
             },

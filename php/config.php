@@ -88,11 +88,13 @@ class WaifuFinderConfig
               'type' => '`$ARRAY`',
             ],
             [
+              'format' => 'uri',
               'name' => 'thumbnail',
               'short' => 'Thumbnail image URL',
               'type' => '`$STRING`',
             ],
             [
+              'format' => 'uri',
               'name' => 'url',
               'short' => 'Full-size image URL',
               'type' => '`$STRING`',
@@ -102,6 +104,10 @@ class WaifuFinderConfig
               'short' => 'Image width in pixels',
               'type' => '`$INTEGER`',
             ],
+          ],
+          'id' => [
+            'field' => 'id',
+            'name' => 'id',
           ],
           'name' => 'image',
           'op' => [
@@ -131,9 +137,13 @@ class WaifuFinderConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/images/random',
-                  'parts' => [
-                    'images',
-                    'random',
+                  'segments' => [
+                    [
+                      'lit' => 'images',
+                    ],
+                    [
+                      'lit' => 'random',
+                    ],
                   ],
                   'select' => [
                     '$action' => 'random',
@@ -145,6 +155,10 @@ class WaifuFinderConfig
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'images',
+                    'random',
                   ],
                 ],
               ],
