@@ -105,7 +105,7 @@ local results, err = client:Image():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/waifu-finder` | publish pending — [install from git tag](https://github.com/voxgig-sdk/waifu-finder-sdk/releases) |
+| TypeScript | `@voxgig-sdk/waifu-finder-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/waifu-finder-sdk/releases) |
 | Python | `voxgig-sdk-waifu-finder` | publish pending — [install from git tag](https://github.com/voxgig-sdk/waifu-finder-sdk/releases) |
 | PHP | `voxgig-sdk/waifu-finder` | publish pending — [install from git tag](https://github.com/voxgig-sdk/waifu-finder-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/waifu-finder-sdk/go` | `go get github.com/voxgig-sdk/waifu-finder-sdk/go@latest` |
@@ -119,7 +119,7 @@ local results, err = client:Image():list()
 ### TypeScript
 
 ```ts
-import { WaifuFinderSDK } from '@voxgig-sdk/waifu-finder'
+import { WaifuFinderSDK } from '@voxgig-sdk/waifu-finder-sdk'
 
 const client = new WaifuFinderSDK()
 
