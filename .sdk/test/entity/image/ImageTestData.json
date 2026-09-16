@@ -3,36 +3,36 @@
     "image": {
       "IMAGE00": {
         "artist": "s5a",
-        "height": "s5b",
+        "height": 91,
         "id": "IMAGE00",
         "rating": "s5d",
         "source": "s5e",
         "tags": [],
         "thumbnail": "s60",
         "url": "s61",
-        "width": "s62"
+        "width": 98
       },
       "IMAGE01": {
         "artist": "sb4",
-        "height": "sb5",
+        "height": 181,
         "id": "IMAGE01",
         "rating": "sb7",
         "source": "sb8",
         "tags": [],
         "thumbnail": "sba",
         "url": "sbb",
-        "width": "sbc"
+        "width": 188
       },
       "IMAGE02": {
         "artist": "s10e",
-        "height": "s10f",
+        "height": 271,
         "id": "IMAGE02",
         "rating": "s111",
         "source": "s112",
         "tags": [],
         "thumbnail": "s114",
         "url": "s115",
-        "width": "s116"
+        "width": 278
       }
     }
   },
@@ -40,13 +40,172 @@
     "image": {
       "image_ref01": {
         "artist": "s168",
-        "height": "s169",
+        "height": 361,
         "rating": "s16b",
         "source": "s16c",
         "tags": [],
         "thumbnail": "s16e",
         "url": "s16f",
-        "width": "s170"
+        "width": 368
+      }
+    }
+  },
+  "requests": {
+    "GET /images/random": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getRandomImages",
+        "parameters": [
+          {
+            "description": "Content rating filter for images (e.g., 'explicit', 'safe', 'questionable')",
+            "example": "explicit",
+            "in": "query",
+            "name": "rating",
+            "required": false,
+            "schema": {
+              "default": "explicit",
+              "enum": [
+                "explicit",
+                "safe",
+                "questionable"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "description": "Maximum number of images to return",
+            "example": 10,
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 10,
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer"
+            }
+          }
+        ],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "artist": "Artist Name",
+                    "height": 1080,
+                    "id": "12345",
+                    "rating": "explicit",
+                    "source": "https://example.com/source",
+                    "tags": [
+                      "anime",
+                      "waifu",
+                      "art"
+                    ],
+                    "thumbnail": "https://example.com/thumbnails/waifu-12345.jpg",
+                    "url": "https://example.com/images/waifu-12345.jpg",
+                    "width": 1920
+                  }
+                ],
+                "schema": {
+                  "items": {
+                    "properties": {
+                      "artist": {
+                        "description": "Artist who created the image",
+                        "type": "string"
+                      },
+                      "height": {
+                        "description": "Image height in pixels",
+                        "type": "integer"
+                      },
+                      "id": {
+                        "description": "Unique identifier for the image",
+                        "type": "string"
+                      },
+                      "rating": {
+                        "description": "Content rating of the image",
+                        "enum": [
+                          "explicit",
+                          "safe",
+                          "questionable"
+                        ],
+                        "type": "string"
+                      },
+                      "source": {
+                        "description": "Original source of the image",
+                        "type": "string"
+                      },
+                      "tags": {
+                        "description": "Tags associated with the image",
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "thumbnail": {
+                        "description": "Thumbnail image URL",
+                        "format": "uri",
+                        "type": "string"
+                      },
+                      "url": {
+                        "description": "Full-size image URL",
+                        "format": "uri",
+                        "type": "string"
+                      },
+                      "width": {
+                        "description": "Image width in pixels",
+                        "type": "integer"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "Successful response with random anime-style images"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Invalid rating parameter"
+                },
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "description": "Error message",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Bad request - Invalid parameters"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": "Internal server error occurred"
+                },
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "description": "Error message",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
       }
     }
   }

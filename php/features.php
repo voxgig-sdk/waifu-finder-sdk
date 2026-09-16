@@ -4,7 +4,10 @@ declare(strict_types=1);
 // WaifuFinder SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class WaifuFinderFeatures
@@ -14,8 +17,14 @@ class WaifuFinderFeatures
         switch ($name) {
             case "base":
                 return new WaifuFinderBaseFeature();
+            case "ratelimit":
+                return new WaifuFinderRatelimitFeature();
+            case "retry":
+                return new WaifuFinderRetryFeature();
             case "test":
                 return new WaifuFinderTestFeature();
+            case "timeout":
+                return new WaifuFinderTimeoutFeature();
             default:
                 return new WaifuFinderBaseFeature();
         }
@@ -31,7 +40,10 @@ class WaifuFinderFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;

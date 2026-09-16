@@ -1,12 +1,18 @@
 # WaifuFinder SDK feature factory
 
 from waifufinder_sdk.feature.base_feature import WaifuFinderBaseFeature
+from waifufinder_sdk.feature.ratelimit_feature import WaifuFinderRatelimitFeature
+from waifufinder_sdk.feature.retry_feature import WaifuFinderRetryFeature
 from waifufinder_sdk.feature.test_feature import WaifuFinderTestFeature
+from waifufinder_sdk.feature.timeout_feature import WaifuFinderTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: WaifuFinderBaseFeature(),
+    "ratelimit": lambda: WaifuFinderRatelimitFeature(),
+    "retry": lambda: WaifuFinderRetryFeature(),
     "test": lambda: WaifuFinderTestFeature(),
+    "timeout": lambda: WaifuFinderTimeoutFeature(),
 }
 
 
