@@ -74,21 +74,7 @@ declare class Config {
     };
     entity: {
         image: {
-            fields: ({
-                name: string;
-                short: string;
-                type: string;
-                format?: undefined;
-            } | {
-                format: string;
-                name: string;
-                short: string;
-                type: string;
-            })[];
-            id: {
-                field: string;
-                name: string;
-            };
+            fields: never[];
             name: string;
             op: {
                 list: {

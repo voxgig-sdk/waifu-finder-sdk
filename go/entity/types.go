@@ -14,15 +14,6 @@ import (
 
 // Image is the typed data model for the image entity.
 type Image struct {
-	Artist *string `json:"artist,omitempty"`
-	Height *int `json:"height,omitempty"`
-	Id *string `json:"id,omitempty"`
-	Rating *string `json:"rating,omitempty"`
-	Source *string `json:"source,omitempty"`
-	Tags *[]any `json:"tags,omitempty"`
-	Thumbnail *string `json:"thumbnail,omitempty"`
-	Url *string `json:"url,omitempty"`
-	Width *int `json:"width,omitempty"`
 }
 
 // ImageListMatch is the typed request payload for Image.ListTyped.

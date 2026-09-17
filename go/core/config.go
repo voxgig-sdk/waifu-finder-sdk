@@ -88,59 +88,7 @@ func MakeConfig() map[string]any {
 		},
 		"entity": map[string]any{
 			"image": map[string]any{
-				"fields": []any{
-					map[string]any{
-						"name": "artist",
-						"short": "Artist who created the image",
-						"type": "`$STRING`",
-					},
-					map[string]any{
-						"name": "height",
-						"short": "Image height in pixels",
-						"type": "`$INTEGER`",
-					},
-					map[string]any{
-						"name": "id",
-						"short": "Unique identifier for the image",
-						"type": "`$STRING`",
-					},
-					map[string]any{
-						"name": "rating",
-						"short": "Content rating of the image",
-						"type": "`$STRING`",
-					},
-					map[string]any{
-						"name": "source",
-						"short": "Original source of the image",
-						"type": "`$STRING`",
-					},
-					map[string]any{
-						"name": "tags",
-						"short": "Tags associated with the image",
-						"type": "`$ARRAY`",
-					},
-					map[string]any{
-						"format": "uri",
-						"name": "thumbnail",
-						"short": "Thumbnail image URL",
-						"type": "`$STRING`",
-					},
-					map[string]any{
-						"format": "uri",
-						"name": "url",
-						"short": "Full-size image URL",
-						"type": "`$STRING`",
-					},
-					map[string]any{
-						"name": "width",
-						"short": "Image width in pixels",
-						"type": "`$INTEGER`",
-					},
-				},
-				"id": map[string]any{
-					"field": "id",
-					"name": "id",
-				},
+				"fields": []any{},
 				"name": "image",
 				"op": map[string]any{
 					"list": map[string]any{

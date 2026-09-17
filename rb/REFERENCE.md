@@ -89,20 +89,6 @@ same parameters as `direct()`. Raises on error.
 image = client.Image
 ```
 
-### Fields
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `artist` | `String` | No | Artist who created the image |
-| `height` | `Integer` | No | Image height in pixels |
-| `id` | `String` | No | Unique identifier for the image |
-| `rating` | `String` | No | Content rating of the image |
-| `source` | `String` | No | Original source of the image |
-| `tags` | `Array` | No | Tags associated with the image |
-| `thumbnail` | `String` | No | Thumbnail image URL |
-| `url` | `String` | No | Full-size image URL |
-| `width` | `Integer` | No | Image width in pixels |
-
 ### Operations
 
 #### `list(reqmatch = nil, ctrl = nil) -> Array`

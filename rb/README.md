@@ -37,7 +37,7 @@ begin
   # list returns an Array of Image records — iterate directly.
   images = client.Image.list
   images.each do |item|
-    puts "#{item["id"]} #{item["artist"]}"
+    puts "#{item}"
   end
 rescue => err
   warn "list failed: #{err}"
@@ -237,15 +237,6 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `artist` | Artist who created the image |
-| `height` | Image height in pixels |
-| `id` | Unique identifier for the image |
-| `rating` | Content rating of the image |
-| `source` | Original source of the image |
-| `tags` | Tags associated with the image |
-| `thumbnail` | Thumbnail image URL |
-| `url` | Full-size image URL |
-| `width` | Image width in pixels |
 
 Operations: List.
 
@@ -265,20 +256,6 @@ Create an instance: `image = client.Image`
 | Method | Description |
 | --- | --- |
 | `list(match)` | List entities matching the criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `artist` | `String` | Artist who created the image |
-| `height` | `Integer` | Image height in pixels |
-| `id` | `String` | Unique identifier for the image |
-| `rating` | `String` | Content rating of the image |
-| `source` | `String` | Original source of the image |
-| `tags` | `Array` | Tags associated with the image |
-| `thumbnail` | `String` | Thumbnail image URL |
-| `url` | `String` | Full-size image URL |
-| `width` | `Integer` | Image width in pixels |
 
 #### Example: List
 
@@ -430,6 +407,7 @@ Use `Helpers.to_map()` to safely validate that a value is a hash.
 rb/
 ├── WaifuFinder_sdk.rb       -- Main SDK module
 ├── config.rb                  -- Configuration
+├── schema.rb                  -- Generated option + entity specs
 ├── features.rb                -- Feature factory
 ├── core/                      -- Core types and context
 ├── entity/                    -- Entity implementations

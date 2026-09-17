@@ -260,15 +260,6 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 
 | Field | Description |
 | --- | --- |
-| `"artist"` | Artist who created the image |
-| `"height"` | Image height in pixels |
-| `"id"` | Unique identifier for the image |
-| `"rating"` | Content rating of the image |
-| `"source"` | Original source of the image |
-| `"tags"` | Tags associated with the image |
-| `"thumbnail"` | Thumbnail image URL |
-| `"url"` | Full-size image URL |
-| `"width"` | Image width in pixels |
 
 Operations: List.
 
@@ -288,20 +279,6 @@ Create an instance: `image := client.Image(nil)`
 | Method | Description |
 | --- | --- |
 | `List(match, ctrl)` | List entities matching the criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `artist` | `string` | Artist who created the image |
-| `height` | `int` | Image height in pixels |
-| `id` | `string` | Unique identifier for the image |
-| `rating` | `string` | Content rating of the image |
-| `source` | `string` | Original source of the image |
-| `tags` | `[]any` | Tags associated with the image |
-| `thumbnail` | `string` | Thumbnail image URL |
-| `url` | `string` | Full-size image URL |
-| `width` | `int` | Image width in pixels |
 
 #### Example: List
 

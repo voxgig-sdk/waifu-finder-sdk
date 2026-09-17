@@ -9,45 +9,8 @@
 # annotations document the shapes. Do not edit by hand.
 
 # Image entity data model.
-#
-# @!attribute [rw] artist
-#   @return [String, nil]
-#
-# @!attribute [rw] height
-#   @return [Integer, nil]
-#
-# @!attribute [rw] id
-#   @return [String, nil]
-#
-# @!attribute [rw] rating
-#   @return [String, nil]
-#
-# @!attribute [rw] source
-#   @return [String, nil]
-#
-# @!attribute [rw] tags
-#   @return [Array, nil]
-#
-# @!attribute [rw] thumbnail
-#   @return [String, nil]
-#
-# @!attribute [rw] url
-#   @return [String, nil]
-#
-# @!attribute [rw] width
-#   @return [Integer, nil]
-Image = Struct.new(
-  :artist,
-  :height,
-  :id,
-  :rating,
-  :source,
-  :tags,
-  :thumbnail,
-  :url,
-  :width,
-  keyword_init: true
-)
+class Image
+end
 
 # Request payload for Image#list.
 #

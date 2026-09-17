@@ -105,12 +105,12 @@ local results, err = client:Image():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/waifu-finder-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/waifu-finder-sdk/releases) |
-| Python | `voxgig-sdk-waifu-finder` | publish pending — [install from git tag](https://github.com/voxgig-sdk/waifu-finder-sdk/releases) |
-| PHP | `voxgig-sdk/waifu-finder` | publish pending — [install from git tag](https://github.com/voxgig-sdk/waifu-finder-sdk/releases) |
+| TypeScript | `@voxgig-sdk/waifu-finder-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/waifu-finder-sdk/tags) |
+| Python | `voxgig-sdk-waifu-finder` | publish pending — [install from git tag](https://github.com/voxgig-sdk/waifu-finder-sdk/tags) |
+| PHP | `voxgig-sdk/waifu-finder` | publish pending — [install from git tag](https://github.com/voxgig-sdk/waifu-finder-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/waifu-finder-sdk/go` | `go get github.com/voxgig-sdk/waifu-finder-sdk/go@latest` |
-| Ruby | `voxgig-sdk-waifu-finder` | publish pending — [install from git tag](https://github.com/voxgig-sdk/waifu-finder-sdk/releases) |
-| Lua | `voxgig-sdk-waifu-finder` | publish pending — [install from git tag](https://github.com/voxgig-sdk/waifu-finder-sdk/releases) |
+| Ruby | `voxgig-sdk-waifu-finder` | publish pending — [install from git tag](https://github.com/voxgig-sdk/waifu-finder-sdk/tags) |
+| Lua | `voxgig-sdk-waifu-finder` | publish pending — [install from git tag](https://github.com/voxgig-sdk/waifu-finder-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/waifu-finder-sdk/go-cli` | `go install github.com/voxgig-sdk/waifu-finder-sdk/go-cli/cmd/waifu-finder@latest` |
 | Go MCP server | `github.com/voxgig-sdk/waifu-finder-sdk/go-mcp` | `go get github.com/voxgig-sdk/waifu-finder-sdk/go-mcp@latest` |
 

@@ -83,20 +83,6 @@ Prepare a fetch definition without sending. Returns the `fetchdef` and raises on
 image = client.Image()
 ```
 
-### Fields
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `artist` | `str` | No | Artist who created the image |
-| `height` | `int` | No | Image height in pixels |
-| `id` | `str` | No | Unique identifier for the image |
-| `rating` | `str` | No | Content rating of the image |
-| `source` | `str` | No | Original source of the image |
-| `tags` | `list` | No | Tags associated with the image |
-| `thumbnail` | `str` | No | Thumbnail image URL |
-| `url` | `str` | No | Full-size image URL |
-| `width` | `int` | No | Image width in pixels |
-
 ### Operations
 
 #### `list(reqmatch=None, ctrl=None) -> list`

@@ -16,16 +16,8 @@ from __future__ import annotations
 from typing import TypedDict, Any
 
 
-class Image(TypedDict, total=False):
-    artist: str
-    height: int
-    id: str
-    rating: str
-    source: str
-    tags: list
-    thumbnail: str
-    url: str
-    width: int
+class Image(TypedDict):
+    pass
 
 
 class ImageListMatch(TypedDict, total=False):

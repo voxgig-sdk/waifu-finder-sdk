@@ -39,7 +39,7 @@ try {
     $images = $client->Image()->list();
     foreach ($images as $record) {
         $item = $record->data_get();
-        echo $item["id"] . " " . $item["artist"] . "\n";
+        echo json_encode($item) . "\n";
     }
 } catch (\Throwable $err) {
     echo "Error: " . $err->getMessage();
@@ -248,15 +248,6 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `artist` | Artist who created the image |
-| `height` | Image height in pixels |
-| `id` | Unique identifier for the image |
-| `rating` | Content rating of the image |
-| `source` | Original source of the image |
-| `tags` | Tags associated with the image |
-| `thumbnail` | Thumbnail image URL |
-| `url` | Full-size image URL |
-| `width` | Image width in pixels |
 
 Operations: List.
 
@@ -276,20 +267,6 @@ Create an instance: `$image = $client->Image();`
 | Method | Description |
 | --- | --- |
 | `list(match)` | List entities matching the criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `artist` | `string` | Artist who created the image |
-| `height` | `int` | Image height in pixels |
-| `id` | `string` | Unique identifier for the image |
-| `rating` | `string` | Content rating of the image |
-| `source` | `string` | Original source of the image |
-| `tags` | `array` | Tags associated with the image |
-| `thumbnail` | `string` | Thumbnail image URL |
-| `url` | `string` | Full-size image URL |
-| `width` | `int` | Image width in pixels |
 
 #### Example: List
 
@@ -441,6 +418,7 @@ Use `Helpers::to_map()` to safely validate that a value is an array.
 php/
 ├── waifufinder_sdk.php          -- Main SDK class
 ├── config.php                     -- Configuration
+├── schema.php                     -- Generated option + entity specs
 ├── features.php                   -- Feature factory
 ├── core/                          -- Core types and context
 ├── entity/                        -- Entity implementations

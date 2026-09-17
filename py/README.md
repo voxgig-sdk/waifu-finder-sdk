@@ -243,15 +243,6 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `artist` | Artist who created the image |
-| `height` | Image height in pixels |
-| `id` | Unique identifier for the image |
-| `rating` | Content rating of the image |
-| `source` | Original source of the image |
-| `tags` | Tags associated with the image |
-| `thumbnail` | Thumbnail image URL |
-| `url` | Full-size image URL |
-| `width` | Image width in pixels |
 
 Operations: List.
 
@@ -271,20 +262,6 @@ Create an instance: `image = client.Image()`
 | Method | Description |
 | --- | --- |
 | `list()` | List entities, optionally matching the given criteria. |
-
-#### Fields
-
-| Field | Type | Description |
-| --- | --- | --- |
-| `artist` | `str` | Artist who created the image |
-| `height` | `int` | Image height in pixels |
-| `id` | `str` | Unique identifier for the image |
-| `rating` | `str` | Content rating of the image |
-| `source` | `str` | Original source of the image |
-| `tags` | `list` | Tags associated with the image |
-| `thumbnail` | `str` | Thumbnail image URL |
-| `url` | `str` | Full-size image URL |
-| `width` | `int` | Image width in pixels |
 
 #### Example: List
 
@@ -435,6 +412,7 @@ Use `helpers.to_map()` to safely validate that a value is a dict.
 py/
 ├── waifufinder_sdk.py         -- Main SDK module
 ├── config.py                    -- Configuration
+├── schema.py                    -- Generated option + entity specs
 ├── features.py                  -- Feature factory
 ├── core/                        -- Core types and context
 ├── entity/                      -- Entity implementations

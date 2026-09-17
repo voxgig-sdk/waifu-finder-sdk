@@ -86,20 +86,6 @@ same parameters as `direct()`.
 local image = client:Image(nil)
 ```
 
-### Fields
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `artist` | `string` | No | Artist who created the image |
-| `height` | `number` | No | Image height in pixels |
-| `id` | `string` | No | Unique identifier for the image |
-| `rating` | `string` | No | Content rating of the image |
-| `source` | `string` | No | Original source of the image |
-| `tags` | `table` | No | Tags associated with the image |
-| `thumbnail` | `string` | No | Thumbnail image URL |
-| `url` | `string` | No | Full-size image URL |
-| `width` | `number` | No | Image width in pixels |
-
 ### Operations
 
 #### `list(reqmatch, ctrl) -> any, err`

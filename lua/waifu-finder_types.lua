@@ -7,15 +7,6 @@
 -- edit by hand.
 
 ---@class Image
----@field artist? string
----@field height? number
----@field id? string
----@field rating? string
----@field source? string
----@field tags? table
----@field thumbnail? string
----@field url? string
----@field width? number
 
 ---@class ImageListMatch
 ---@field limit? number

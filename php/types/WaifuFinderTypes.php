@@ -15,15 +15,6 @@ declare(strict_types=1);
 /** Image entity data model. */
 class Image
 {
-    public ?string $artist = null;
-    public ?int $height = null;
-    public ?string $id = null;
-    public ?string $rating = null;
-    public ?string $source = null;
-    public ?array $tags = null;
-    public ?string $thumbnail = null;
-    public ?string $url = null;
-    public ?int $width = null;
 }
 
 /** Request payload for Image#list. */

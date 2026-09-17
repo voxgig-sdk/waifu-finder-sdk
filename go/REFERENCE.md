@@ -94,20 +94,6 @@ image := client.Image(nil)
 fmt.Println(image.GetName()) // "image"
 ```
 
-### Fields
-
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `artist` | `string` | No | Artist who created the image |
-| `height` | `int` | No | Image height in pixels |
-| `id` | `string` | No | Unique identifier for the image |
-| `rating` | `string` | No | Content rating of the image |
-| `source` | `string` | No | Original source of the image |
-| `tags` | `[]any` | No | Tags associated with the image |
-| `thumbnail` | `string` | No | Thumbnail image URL |
-| `url` | `string` | No | Full-size image URL |
-| `width` | `int` | No | Image width in pixels |
-
 ### Operations
 
 #### `List(reqmatch, ctrl map[string]any) (any, error)`

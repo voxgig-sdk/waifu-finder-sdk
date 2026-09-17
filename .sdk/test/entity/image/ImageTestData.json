@@ -1,53 +1,14 @@
 {
   "existing": {
     "image": {
-      "IMAGE00": {
-        "artist": "s5a",
-        "height": 91,
-        "id": "IMAGE00",
-        "rating": "s5d",
-        "source": "s5e",
-        "tags": [],
-        "thumbnail": "s60",
-        "url": "s61",
-        "width": 98
-      },
-      "IMAGE01": {
-        "artist": "sb4",
-        "height": 181,
-        "id": "IMAGE01",
-        "rating": "sb7",
-        "source": "sb8",
-        "tags": [],
-        "thumbnail": "sba",
-        "url": "sbb",
-        "width": 188
-      },
-      "IMAGE02": {
-        "artist": "s10e",
-        "height": 271,
-        "id": "IMAGE02",
-        "rating": "s111",
-        "source": "s112",
-        "tags": [],
-        "thumbnail": "s114",
-        "url": "s115",
-        "width": 278
-      }
+      "IMAGE00": {},
+      "IMAGE01": {},
+      "IMAGE02": {}
     }
   },
   "new": {
     "image": {
-      "image_ref01": {
-        "artist": "s168",
-        "height": 361,
-        "rating": "s16b",
-        "source": "s16c",
-        "tags": [],
-        "thumbnail": "s16e",
-        "url": "s16f",
-        "width": 368
-      }
+      "image_ref01": {}
     }
   },
   "requests": {
