@@ -96,24 +96,6 @@ func MakeConfig() map[string]any {
 						"name": "list",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{
-									"query": []any{
-										map[string]any{
-											"example": 10,
-											"kind": "query",
-											"name": "limit",
-											"orig": "limit",
-											"type": "`$INTEGER`",
-										},
-										map[string]any{
-											"example": "explicit",
-											"kind": "query",
-											"name": "rating",
-											"orig": "rating",
-											"type": "`$STRING`",
-										},
-									},
-								},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/images/random",
@@ -125,20 +107,39 @@ func MakeConfig() map[string]any {
 										"lit": "random",
 									},
 								},
+								"parts": []any{
+									"images",
+									"random",
+								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body`",
+								},
+								"args": map[string]any{
+									"query": []any{
+										map[string]any{
+											"name": "limit",
+											"orig": "limit",
+											"type": "`$INTEGER`",
+											"kind": "query",
+											"example": 10,
+										},
+										map[string]any{
+											"name": "rating",
+											"orig": "rating",
+											"type": "`$STRING`",
+											"kind": "query",
+											"example": "explicit",
+										},
+									},
+								},
 								"select": map[string]any{
 									"$action": "random",
 									"exist": []any{
 										"limit",
 										"rating",
 									},
-								},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body`",
-								},
-								"parts": []any{
-									"images",
-									"random",
 								},
 							},
 						},

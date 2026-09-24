@@ -19,7 +19,6 @@ import type {
   ImageListMatch,
 } from '../WaifuFinderTypes'
 
-// TODO: needs Entity superclass
 class ImageEntity extends WaifuFinderEntityBase<Image> {
 
   constructor(client: WaifuFinderSDK, entopts: any) {

@@ -92,24 +92,6 @@ local function make_config()
             ["name"] = "list",
             ["points"] = {
               {
-                ["args"] = {
-                  ["query"] = {
-                    {
-                      ["example"] = 10,
-                      ["kind"] = "query",
-                      ["name"] = "limit",
-                      ["orig"] = "limit",
-                      ["type"] = "`$INTEGER`",
-                    },
-                    {
-                      ["example"] = "explicit",
-                      ["kind"] = "query",
-                      ["name"] = "rating",
-                      ["orig"] = "rating",
-                      ["type"] = "`$STRING`",
-                    },
-                  },
-                },
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/images/random",
@@ -121,20 +103,39 @@ local function make_config()
                     ["lit"] = "random",
                   },
                 },
+                ["parts"] = {
+                  "images",
+                  "random",
+                },
+                ["rename"] = {},
+                ["transform"] = {
+                  ["req"] = "`reqdata`",
+                  ["res"] = "`body`",
+                },
+                ["args"] = {
+                  ["query"] = {
+                    {
+                      ["name"] = "limit",
+                      ["orig"] = "limit",
+                      ["type"] = "`$INTEGER`",
+                      ["kind"] = "query",
+                      ["example"] = 10,
+                    },
+                    {
+                      ["name"] = "rating",
+                      ["orig"] = "rating",
+                      ["type"] = "`$STRING`",
+                      ["kind"] = "query",
+                      ["example"] = "explicit",
+                    },
+                  },
+                },
                 ["select"] = {
                   ["$action"] = "random",
                   ["exist"] = {
                     "limit",
                     "rating",
                   },
-                },
-                ["transform"] = {
-                  ["req"] = "`reqdata`",
-                  ["res"] = "`body`",
-                },
-                ["parts"] = {
-                  "images",
-                  "random",
                 },
               },
             },

@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ImageEntity = void 0;
 const WaifuFinderEntityBase_1 = require("../WaifuFinderEntityBase");
-// TODO: needs Entity superclass
 class ImageEntity extends WaifuFinderEntityBase_1.WaifuFinderEntityBase {
     constructor(client, entopts) {
         super(client, entopts);
