@@ -37,6 +37,8 @@ require_once __DIR__ . '/TransformResponse.php';
 
 WaifuFinderUtility::setRegistrar(function (WaifuFinderUtility $u): void {
     $u->clean = [WaifuFinderClean::class, 'call'];
+    $u->clean_add = [WaifuFinderClean::class, 'add'];
+    $u->clean_explain = [WaifuFinderDone::class, 'clean_explain'];
     $u->done = [WaifuFinderDone::class, 'call'];
     $u->make_error = [WaifuFinderMakeError::class, 'call'];
     $u->feature_add = [WaifuFinderFeatureAdd::class, 'call'];

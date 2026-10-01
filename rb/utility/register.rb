@@ -33,6 +33,8 @@ require_relative 'transform_response'
 
 WaifuFinderUtility.registrar = ->(u) {
   u.clean = WaifuFinderUtilities::Clean
+  u.clean_add = WaifuFinderUtilities::CleanAdd
+  u.clean_explain = WaifuFinderUtilities::CleanExplain
   u.done = WaifuFinderUtilities::Done
   u.make_error = WaifuFinderUtilities::MakeError
   u.feature_add = WaifuFinderUtilities::FeatureAdd
