@@ -3,5 +3,12 @@
     "SUMMARY.md"
   ],
   "config": ".sdk/doc/qa/vale.ini",
-  "routes": {}
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "Production server",
+      "Successful response with random anime-style images",
+      "This API allows users to generate and explore anime-style images with simple queries. With just a click, users can view images in full size and access detailed information about each image."
+    ]
+  }
 }

@@ -87,6 +87,7 @@ class Config {
             },
             "optspec": {
                 "clearTimer": "`$FUNCTION`",
+                "now": "`$FUNCTION`",
                 "setTimer": "`$FUNCTION`"
             },
             "strict": false,
@@ -151,11 +152,11 @@ class Config {
                                 ]
                             },
                             "select": {
-                                "$action": "random",
-                                "exist": [
-                                    "limit",
-                                    "rating"
-                                ]
+                                "$action": "random"
+                            },
+                            "response": {
+                                "kind": "json",
+                                "media": "application/json"
                             }
                         }
                     ]

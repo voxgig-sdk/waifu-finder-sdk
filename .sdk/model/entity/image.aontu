@@ -39,10 +39,10 @@ main: kit: entity: image: {
           o: "/images/random"
           q: {
             "$action": "random"
-            exist: [
-              "limit"
-              "rating"
-            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
           }
           s: [
             {

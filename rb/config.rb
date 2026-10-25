@@ -79,6 +79,7 @@ module WaifuFinderConfig
           },
           "optspec" => {
             "clearTimer" => "`$FUNCTION`",
+            "now" => "`$FUNCTION`",
             "setTimer" => "`$FUNCTION`",
           },
           "strict" => false,
@@ -144,10 +145,10 @@ module WaifuFinderConfig
                   },
                   "select" => {
                     "$action" => "random",
-                    "exist" => [
-                      "limit",
-                      "rating",
-                    ],
+                  },
+                  "response" => {
+                    "kind" => "json",
+                    "media" => "application/json",
                   },
                 },
               ],

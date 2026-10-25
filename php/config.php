@@ -93,6 +93,7 @@ class WaifuFinderConfig
           ],
           'optspec' => [
             'clearTimer' => '`$FUNCTION`',
+            'now' => '`$FUNCTION`',
             'setTimer' => '`$FUNCTION`',
           ],
           'strict' => false,
@@ -158,10 +159,10 @@ class WaifuFinderConfig
                   ],
                   'select' => [
                     '$action' => 'random',
-                    'exist' => [
-                      'limit',
-                      'rating',
-                    ],
+                  ],
+                  'response' => [
+                    'kind' => 'json',
+                    'media' => 'application/json',
                   ],
                 ],
               ],

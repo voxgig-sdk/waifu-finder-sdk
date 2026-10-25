@@ -21,9 +21,23 @@ const PLAN = [
             "rating": "explicit"
         },
         "headers": [],
+        "cookies": [],
+        "responseMedia": [
+            "application/json"
+        ],
         "query": [
             "rating",
             "limit"
+        ],
+        "queryArgs": [
+            {
+                "name": "limit",
+                "wire": "limit"
+            },
+            {
+                "name": "rating",
+                "wire": "rating"
+            }
         ],
         "auth": null,
         "status": 200,
